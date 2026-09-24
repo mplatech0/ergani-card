@@ -1,63 +1,92 @@
+
 <!DOCTYPE html>
 <html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My App - Google Drive Integration</title>
+    <title>ErganiCard - Ψηφιακή Κάρτα Εργασίας</title>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: Arial, sans-serif;
             line-height: 1.6;
+            color: #333;
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 20px;
-            color: #333;
+            padding: 20px;
+            background-color: #f9f9f9;
         }
         header {
             text-align: center;
-            padding-bottom: 30px;
-            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 30px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        h1 { color: #1a73e8; }
-        .content { margin-top: 30px; }
-        .footer {
-            margin-top: 50px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            font-size: 0.9em;
+        h1 {
+            color: #1a73e8;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.1em;
             color: #666;
-            text-align: center;
         }
-        a { color: #1a73e8; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        .section {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #1a73e8;
+            padding-bottom: 8px;
+            margin-top: 0;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #777;
+            font-size: 0.9em;
+        }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Welcome to My App</h1>
-        <p>A simple and secure application integrated with Google Drive.</p>
+        <h1>ErganiCard</h1>
+        <p class="subtitle">Εφαρμογή Android για τη Διαχείριση της Ψηφιακής Κάρτας Εργασίας (Εργάνη ΙΙ)</p>
     </header>
 
-    <div class="content">
-        <h2>About the Application</h2>
-        <p>Our app helps you seamlessly manage and sync your data using your personal Google Drive storage. By integrating directly with Google Drive API, we ensure that your data stays safe, secure, and fully under your control.</p>
+    <div class="section">
+        <h2>Σχετικά με την Εφαρμογή</h2>
+        <p>Το <strong>ErganiCard</strong> είναι μια εφαρμογή Android σχεδιασμένη για την καταγραφή και διαχείριση των συμβάντων εργασίας και της ψηφιακής κάρτας εργασίας (Εργάνη ΙΙ), παρέχοντας εργαλεία σάρωσης QR, διαχείρισης ωραρίου, εξαγωγής δεδομένων και τοπικού ή cloud backup.</p>
+    </div>
 
-        <h2>Key Features</h2>
+    <div class="section">
+        <h2>Βασικά Χαρακτηριστικά</h2>
         <ul>
-            <li>Secure authentication via Google OAuth 2.0.</li>
-            <li>Direct integration with Google Drive for data backup and synchronization.</li>
-            <li>No intermediate storage of your personal Google Drive files on external servers.</li>
+            <li><strong>Σάρωση QR Code:</strong> Σάρωση κωδικών QR για την καταγραφή συμβάντων εργασίας (προσέλευση, αποχώρηση, διαλείμματα).</li>
+            <li><strong>Χειροκίνητη Καταγραφή & Πρόβλεψη:</strong> Δυνατότητα χειροκίνητης καταγραφής συμβάντων, προσθήκης αιτιολογίας καθυστέρησης και έξυπνης πρόβλεψης τύπου συμβάντος.</li>
+            <li><strong>Υπηρεσία Παρασκηνίου (Daemon Service):</strong> Εκτέλεση εργασιών στο παρασκήνιο, αυτόματος συγχρονισμός και διαχείριση ειδοποιήσεων.</li>
+            <li><strong>Υπενθυμίσεις:</strong> Σύστημα ειδοποιήσεων και προγραμματισμού υπενθυμίσεων για τα ωράρια εργασίας.</li>
+            <li><strong>Εξαγωγή & Εκτύπωση:</strong> Εξαγωγή ιστορικού συμβάντων σε αρχεία CSV και δυνατότητα εκτύπωσης ή κοινής χρήσης αναφορών.</li>
+            <li><strong>Google Drive Cloud Backup:</strong> Σύνδεση με Google Drive για ασφαλές backup, εξαγωγή και επαναφορά της βάσης δεδομένων (Room Database).</li>
+            <li><strong>Ασφάλεια & Διαπιστευτήρια:</strong> Τοπική αποθήκευση δεδομένων και ασφαλής διαχείριση στοιχείων σύνδεσης με το σύστημα Εργάνη API.</li>
         </ul>
-
-        <h2>Support & Contact</h2>
-        <p>If you have any questions, feedback, or need assistance, feel free to contact us at:</p>
-        <p><strong>Email:</strong> <a href="mailto:mplatech0@gmail.com">mplatech0@gmail.com</a></p>
     </div>
 
-    <div class="footer">
-        <p>&copy; 2026 My App. All rights reserved. | <a href="privacy.html">Privacy Policy</a></p>
-    </div>
+    <footer>
+        <p>&copy; ErganiCard. Όλα τα δικαιώματα διατηρούνται.</p>
+    </footer>
 
 </body>
 </html>
